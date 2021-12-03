@@ -27,18 +27,19 @@ article{
     height: 300px;
     font-family: 'Dosis', sans-serif;
     font-size: 20px;
+    padding: 10px;
     margin: 20px;
 }
 
-#divCaracteristicas{
+#divDatos, #divCaracteristicas{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-#divCaracteristicas>div{
+#divDatos>div, #divCaracteristicas>p{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -88,6 +89,10 @@ main>div{
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+}
+
+form>fieldset>fieldset>input{
+    margin: 25px;
 }
 
 input, select{

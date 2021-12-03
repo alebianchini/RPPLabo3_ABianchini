@@ -19,6 +19,10 @@ function crearAnuncio(anuncio){
     const descripcion = document.createElement("p");
     const precio = document.createElement("p");
     const $divCaracteristicas = document.createElement("div");
+    const amistoso = document.createElement("p");
+    const sano = document.createElement("p");
+    const rescatado = document.createElement("p");
+    const $divDatos = document.createElement("div");
     const $divRaza = document.createElement("div");
     const imgRaza = document.createElement("img");
     const raza = document.createElement("p");
@@ -42,13 +46,20 @@ function crearAnuncio(anuncio){
     vacuna.textContent = anuncio.vacuna;
     $divVacuna.appendChild(imgVacuna);
     $divVacuna.appendChild(vacuna);
-    $divCaracteristicas.appendChild($divRaza);
-    $divCaracteristicas.appendChild($divNacimiento);
-    $divCaracteristicas.appendChild($divVacuna);
-    $divCaracteristicas.setAttribute("id", "divCaracteristicas");
+    $divDatos.appendChild($divRaza);
+    $divDatos.appendChild($divNacimiento);
+    $divDatos.appendChild($divVacuna);
+    $divDatos.setAttribute("id", "divDatos");
     titulo.textContent = anuncio.titulo;
     descripcion.textContent = anuncio.descripcion;
     precio.textContent = "PRECIO: $" + anuncio.precio;
+    amistoso.textContent = "Amistoso: " + anuncio.amistoso;
+    sano.textContent = "Sano: " + anuncio.sano;
+    rescatado.textContent = "Rescatado: " + anuncio.rescatado;
+    $divCaracteristicas.appendChild(amistoso);
+    $divCaracteristicas.appendChild(sano);
+    $divCaracteristicas.appendChild(rescatado);
+    $divCaracteristicas.setAttribute("id", "divCaracteristicas")
     $boton.href = "#";
     $boton.textContent = "Ver Mascota";
     $boton.classList.add("button");
@@ -58,6 +69,7 @@ function crearAnuncio(anuncio){
     $articulo.appendChild(descripcion);
     $articulo.appendChild(precio);
     $articulo.appendChild($divCaracteristicas);
+    $articulo.appendChild($divDatos);
     $articulo.appendChild($boton);
 
     return $articulo;
