@@ -17,6 +17,7 @@ function crearAnuncio(anuncio){
     const $articulo = document.createElement("article");
     const titulo = document.createElement("h2");
     const descripcion = document.createElement("p");
+    const sexo = document.createElement("p");
     const precio = document.createElement("p");
     const $divCaracteristicas = document.createElement("div");
     const amistoso = document.createElement("p");
@@ -52,6 +53,7 @@ function crearAnuncio(anuncio){
     $divDatos.setAttribute("id", "divDatos");
     titulo.textContent = anuncio.titulo;
     descripcion.textContent = anuncio.descripcion;
+    sexo.textContent = "Sexo: " + anuncio.sexo;
     precio.textContent = "PRECIO: $" + anuncio.precio;
     amistoso.textContent = "Amistoso: " + anuncio.amistoso;
     sano.textContent = "Sano: " + anuncio.sano;
@@ -67,6 +69,7 @@ function crearAnuncio(anuncio){
 
     $articulo.appendChild(titulo);
     $articulo.appendChild(descripcion);
+    $articulo.appendChild(sexo);
     $articulo.appendChild(precio);
     $articulo.appendChild($divCaracteristicas);
     $articulo.appendChild($divDatos);

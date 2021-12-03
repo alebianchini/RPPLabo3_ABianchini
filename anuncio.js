@@ -12,9 +12,10 @@ class Anuncio{
 
 export default class Anuncio_Mascota extends Anuncio {
 
-    constructor(id,titulo,transaccion,descripcion,precio,amistoso,sano,rescatado,animal,raza,nacimiento,vacuna) {
+    constructor(id,titulo,transaccion,descripcion,precio,amistoso,sano,rescatado,animal,sexo,raza,nacimiento,vacuna) {
         super(id,titulo,transaccion,descripcion,precio);
         this.animal = animal;
+        this.sexo = sexo;
         this.amistoso = amistoso;
         this.sano = sano;
         this.rescatado = rescatado;

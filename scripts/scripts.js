@@ -102,8 +102,8 @@ function eliminarSpinner(){
 $formulario.addEventListener("submit", (e)=>{
     e.preventDefault();
 
-    const {txtId, txtTitulo, txtDescripcion, rdoAnimal, boxAmistoso, boxSano, boxRescatado, txtPrecio, txtRaza, txtNacimiento, txtVacuna} = $formulario;
-    const formAnuncio = new Anuncio_Mascota(txtId.value, txtTitulo.value, "venta", txtDescripcion.value, txtPrecio.value, boxAmistoso.checked, boxSano.checked, boxRescatado.checked, rdoAnimal.value, txtRaza.value, txtNacimiento.value, txtVacuna.value);
+    const {txtId, txtTitulo, txtDescripcion, rdoAnimal, rdoSexo, boxAmistoso, boxSano, boxRescatado, txtPrecio, txtRaza, txtNacimiento, txtVacuna} = $formulario;
+    const formAnuncio = new Anuncio_Mascota(txtId.value, txtTitulo.value, "venta", txtDescripcion.value, txtPrecio.value, boxAmistoso.checked, boxSano.checked, boxRescatado.checked, rdoAnimal.value, rdoSexo.value, txtRaza.value, txtNacimiento.value, txtVacuna.value);
     
     if(formAnuncio.id === ''){
         formAnuncio.id = Date.now();
@@ -139,12 +139,13 @@ function bajaAnuncio(id){
 }
 
 function cargarFormulario(anuncio) {
-    const {txtId, txtTitulo, txtDescripcion, rdoAnimal, boxAmistoso, boxSano, boxRescatado, txtPrecio, txtRaza, txtNacimiento, txtVacuna} = $formulario;
+    const {txtId, txtTitulo, txtDescripcion, rdoAnimal, rdoSexo, boxAmistoso, boxSano, boxRescatado, txtPrecio, txtRaza, txtNacimiento, txtVacuna} = $formulario;
     
     txtId.value = anuncio.id;
     txtTitulo.value = anuncio.titulo;
     txtDescripcion.value = anuncio.descripcion;
     rdoAnimal.value = anuncio.animal;
+    rdoSexo.value = anuncio.sexo;
     boxAmistoso.checked = anuncio.amistoso;
     boxSano.checked = anuncio.sano;
     boxRescatado.checked = anuncio.rescatado;
